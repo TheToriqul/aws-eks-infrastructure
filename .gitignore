@@ -35,3 +35,49 @@ override.tf.json
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
+
+# OS files
+.DS_Store
+.idea/
+*.swp
+*.swo
+Thumbs.db
+
+# Kubernetes
+kubeconfig*
+.kube/
+
+# Environment variables and secrets
+.env
+*.env
+.envrc
+secrets.yaml
+*secrets*
+
+# Helm
+charts/*.tgz
+.helm/
+
+# IDE and editor files
+.vscode/
+*.sublime-*
+*.code-workspace
+
+# Logs
+*.log
+logs/
+log/
+
+# Dependencies
+node_modules/
+vendor/
+
+# Build outputs
+dist/
+build/
+*.zip
+*.tar.gz
+
+# Temporary files
+tmp/
+temp/
