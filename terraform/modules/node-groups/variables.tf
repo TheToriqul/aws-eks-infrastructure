@@ -43,3 +43,34 @@ variable "instance_types" {
   type        = list(string)
   default     = ["t3.medium"]
 }
+
+
+variable "mixed_desired_size" {
+  description = "Desired number of nodes in mixed instance group"
+  type        = number
+  default     = 2
+}
+
+variable "mixed_max_size" {
+  description = "Maximum number of nodes in mixed instance group"
+  type        = number
+  default     = 5
+}
+
+variable "mixed_min_size" {
+  description = "Minimum number of nodes in mixed instance group"
+  type        = number
+  default     = 1
+}
+
+variable "mixed_instance_types" {
+  description = "List of instance types for mixed instance policy"
+  type        = list(string)
+  default     = ["t3.medium", "t3a.medium", "t3.large", "t3a.large"]
+}
+
+variable "disk_size" {
+  description = "Node disk size in GB"
+  type        = number
+  default     = 20
+}
