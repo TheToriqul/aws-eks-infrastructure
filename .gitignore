@@ -1,3 +1,7 @@
+# Temporary gitignore files
+README.md
+*.md
+
 # Local .terraform directories
 **/.terraform/*
 
