@@ -80,4 +80,4 @@ build/
 
 # Temporary files
 tmp/
-temp/
+temp/helm/environment-configs/*/secrets.yaml

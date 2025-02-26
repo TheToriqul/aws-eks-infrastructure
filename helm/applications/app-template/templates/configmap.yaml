@@ -1,0 +1,18 @@
+# ConfigMap Template 
+# File: helm/applications/app-template/templates/configmap.yaml
+
+{{- if .Values.configMaps }}
+{{- range .Values.configMaps }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "app-template.fullname" $ }}-{{ .name }}
+  labels:
+    {{- include "app-template.labels" $ | nindent 4 }}
+data:
+  {{- range $key, $val := .data }}
+  {{ $key }}: {{ $val | quote }}
+  {{- end }}
+---
+{{- end }}
+{{- end }}

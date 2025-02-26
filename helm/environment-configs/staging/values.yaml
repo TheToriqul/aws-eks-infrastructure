@@ -1,0 +1,32 @@
+# Staging Environment
+# File: helm/environment-configs/staging/values.yaml
+
+
+global:
+  environment: staging
+  domain: staging.example.com
+  replicas: 2
+
+resources:
+  limits:
+    cpu: 1000m
+    memory: 1Gi
+  requests:
+    cpu: 500m
+    memory: 512Mi
+
+ingress:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: letsencrypt-staging
+
+monitoring:
+  enabled: true
+  retention: 5d
+
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 5
+  targetCPUUtilizationPercentage: 70
+  targetMemoryUtilizationPercentage: 70

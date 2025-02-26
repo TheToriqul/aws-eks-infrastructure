@@ -1,0 +1,9 @@
+# Base Chart
+# File: helm/applications/app-template/Chart.yaml
+
+apiVersion: v2
+name: app-template
+description: A Helm chart template for Kubernetes applications
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
